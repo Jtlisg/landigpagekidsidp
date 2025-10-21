@@ -1,0 +1,56 @@
+/* ===== RESET BÁSICO ===== */
+
+/* Elimina márgenes y rellenos por defecto */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Quita subrayado de los enlaces y mejora la herencia de color */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Quita los estilos de lista por defecto */
+ul, ol {
+  list-style: none;
+}
+
+/* Hace que las imágenes nunca sobrepasen su contenedor */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Asegura que los elementos ocupen el ancho total disponible */
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  font-size: 62.5%;
+  line-height: 1.5;
+  color: #333;
+  background-color: #fff;
+  scroll-behavior: smooth;
+}
+
+/* Mejora la accesibilidad de los botones */
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font: inherit;
+}
+
+/* Hace que los encabezados y párrafos no tengan margen superior */
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  font-weight: normal;
+}
+
+
+
+/* Seccion Nav */
