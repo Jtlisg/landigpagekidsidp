@@ -44,6 +44,8 @@ html, body {
   color: #333;
   background-color: #fff;
   scroll-behavior: smooth;
+  overflow-x: hidden;
+
 }
 
 /* Mejora la accesibilidad de los botones */
@@ -190,12 +192,16 @@ h1, h2, h3, h4, h5, h6, p {
   flex-direction: column;
   transition: transform 0.8s ease-in-out, opacity 0.8s ease;
   transform: translateX(100%); /* fuera de pantalla */
+  
+  overflow-y: auto;   /* si hay muchos links, el menú puede scrollear solo */
+  -webkit-overflow-scrolling: touch; /* suaviza scroll en iOS */
+
+
 }
 
 
 .nav__list--active {
     transform: translateX(0);
-
 }
 
 
