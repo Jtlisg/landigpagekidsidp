@@ -1,0 +1,226 @@
+/* Variables */
+
+:root {
+    --base-white : #fffff1;
+    --rosado-suave: #af5f9e;
+    --gris-chocolate: #333;
+}
+
+
+/* ===== RESET BÁSICO ===== */
+
+/* Elimina márgenes y rellenos por defecto */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Quita subrayado de los enlaces y mejora la herencia de color */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Quita los estilos de lista por defecto */
+ul, ol {
+  list-style: none;
+}
+
+/* Hace que las imágenes nunca sobrepasen su contenedor */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Asegura que los elementos ocupen el ancho total disponible */
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  font-size: 62.5%;
+  line-height: 1.5;
+  color: #333;
+  background-color: #fff;
+  scroll-behavior: smooth;
+}
+
+/* Mejora la accesibilidad de los botones */
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font: inherit;
+}
+
+/* Hace que los encabezados y párrafos no tengan margen superior */
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  font-weight: normal;
+}
+
+
+
+
+
+
+
+/* Seccion Nav */
+
+.nav {
+
+    height: 10vh;
+    
+
+    background-color: var(--base-white);
+    color: var(--gris-chocolate);
+    font-size: 1.4rem;
+    
+}
+
+.nav__container {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    justify-content: space-between;
+
+    align-items: center;
+    margin: 0 15px;
+    padding: 10px;
+    
+}
+
+.nav__logo {
+
+    font-size: 3rem;
+    padding: 5px;
+}
+
+.nav__logo span {
+    color: var(--rosado-suave);
+}
+
+
+/* Nav Toggle */
+/* ---------- */
+.nav__toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.nav__toggle-bar {
+    width: 100%;
+    height: 0.2rem;
+    background-color: var(--gris-chocolate);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    transform-origin: center;
+}
+
+.nav__toggle-bar:nth-child(1) {
+    transform-origin: center;
+}
+.nav__toggle-bar:nth-child(3) {
+    transform-origin:  center;
+}
+
+
+.nav__toggle--open .nav__toggle-bar:nth-child(1){
+    transform: translateY(0.9rem) rotate(45deg);
+
+}
+.nav__toggle--open .nav__toggle-bar:nth-child(2){
+    opacity: 0;
+}
+.nav__toggle--open .nav__toggle-bar:nth-child(3){
+    transform: translateY(-0.7rem) rotate(-45deg);
+}
+
+.nav__toggle {
+    display: flex; /* visible en móviles */
+  }
+
+
+
+  /* Clase que se activará con JS */
+  .nav__list--active {
+    transform: translateX(0);
+ 
+  }
+
+  .nav__list li {
+    margin: 2rem 0;
+    font-size: 2.4rem;
+  }
+
+.nav__list li a {
+    padding: 10px;
+}
+
+
+
+
+
+
+.nav__toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2.5rem;
+  height: 2.5rem;
+  cursor: pointer;
+}
+
+.nav__list  {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 10vh;
+  right: 0;
+  width: 100%;
+  height: calc(100vh - 10vh);
+  background-color: var(--base-white);
+  flex-direction: column;
+  transition: transform 0.8s ease-in-out, opacity 0.8s ease;
+  transform: translateX(100%); /* fuera de pantalla */
+}
+
+
+.nav__list--active {
+    transform: translateX(0);
+
+}
+
+
+
+
+@media screen and (min-width: 768px) {
+  .nav__toggle {
+    display: none;
+  }
+
+ .nav__list {
+    display: flex;
+    flex-direction: row;
+    position: static; /* en desktop no necesitamos absolute */
+    transform: none;  /* quita cualquier translate */
+    width: auto;
+    height: auto;
+    transition: none;
+    align-items: center;
+    opacity: 1;
+  }
+
+
+  .nav__list li {
+    margin: 0 1rem;
+    font-size: 1.6rem;
+  }
+}
