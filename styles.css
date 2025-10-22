@@ -44,6 +44,8 @@ html, body {
   color: #333;
   background-color: #fff;
   scroll-behavior: smooth;
+  overflow-x: hidden;
+
 }
 
 /* Mejora la accesibilidad de los botones */
@@ -178,24 +180,27 @@ h1, h2, h3, h4, h5, h6, p {
   cursor: pointer;
 }
 
-.nav__list  {
+.nav__list {
   display: flex;
   align-items: center;
-  position: absolute;
+  position: fixed; /* cambia de absolute a fixed */
   top: 10vh;
   right: 0;
   width: 100%;
   height: calc(100vh - 10vh);
   background-color: var(--base-white);
   flex-direction: column;
-  transition: transform 0.8s ease-in-out, opacity 0.8s ease;
-  transform: translateX(100%); /* fuera de pantalla */
+  transition: transform 0.5s ease-in-out;
+  transform: translateX(100%);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  z-index: 1000; /* aseguramos que esté encima de todo */
 }
+
 
 
 .nav__list--active {
     transform: translateX(0);
-
 }
 
 
@@ -224,3 +229,4 @@ h1, h2, h3, h4, h5, h6, p {
     font-size: 1.6rem;
   }
 }
+
