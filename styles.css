@@ -354,7 +354,9 @@ header {
 } 
 
 .Header__subtitle {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
+    width: 450px;
+    margin: 0 auto;
     color: #333;
     text-align: center;
     
