@@ -71,14 +71,9 @@ h1, h2, h3, h4, h5, h6, p {
 /* Seccion Nav */
 
 .nav {
-
-    height: 10vh;
-    
-
     background-color: var(--base-white);
     color: var(--gris-chocolate);
     font-size: 1.4rem;
-    
 }
 
 .nav__container {
@@ -86,15 +81,12 @@ h1, h2, h3, h4, h5, h6, p {
     flex-direction: row;
     height: 100%;
     justify-content: space-between;
-
     align-items: center;
-    margin: 0 15px;
     padding: 10px;
     
 }
 
 .nav__logo {
-
     font-size: 3rem;
     padding: 5px;
 }
@@ -107,6 +99,8 @@ h1, h2, h3, h4, h5, h6, p {
 /* Nav Toggle */
 /* ---------- */
 .nav__toggle {
+    margin-right: 5px;
+
     display: none;
     flex-direction: column;
     justify-content: space-around;
@@ -166,6 +160,10 @@ h1, h2, h3, h4, h5, h6, p {
     padding: 10px;
 }
 
+.nav__list .nav__link--donar  {
+  padding: 10px 30px;
+}
+
 
 
 
@@ -184,7 +182,7 @@ h1, h2, h3, h4, h5, h6, p {
   display: flex;
   align-items: center;
   position: fixed; /* cambia de absolute a fixed */
-  top: 10vh;
+  bottom: 1px;
   right: 0;
   width: 100%;
   height: calc(100vh - 10vh);
@@ -197,6 +195,20 @@ h1, h2, h3, h4, h5, h6, p {
   z-index: 1000; /* aseguramos que esté encima de todo */
 }
 
+.nav__link--donar {
+  color: #333;
+  border: 2px solid var(--rosado-suave);
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  
+}
+
+.nav__link--donar:hover {
+  background-color: #af5f9e;
+  color: #fff;
+}
+
+
 
 
 .nav__list--active {
@@ -205,8 +217,78 @@ h1, h2, h3, h4, h5, h6, p {
 
 
 
+/* BOTON DONAR */
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  width: 100%;
+  height: 280px;
+  padding: 10px;
+
+  background-color: var(--rosado-suave);
+}
+
+.header__title-container .header__title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--base-white);
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+
+} 
+
+.Header__subtitle {
+    font-size: 1.4rem;
+    color: #333;
+    text-align: center;
+    
+}
+
+.header__button-container {
+  display: flex;
+  width: 200px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+  bottom: 50px;
+}
+
+.dbox-donation-page-button {
+  background: rgb(18, 138, 237); 
+  color: rgb(255, 255, 255); 
+  text-decoration: none; 
+  display: flex;
+  gap: 8px; 
+  width: fit-content; 
+  font-size: 16px; 
+  border-radius: 5px; line-height: 24px; 
+  box-shadow: 3px 2px 1px 2px rgba(0, 0, 0, 0.4);
+  padding: 8px 24px;
+  transition: transform 0.3s ease, box-shadow 0.2s ease;
+}
+
+.dbox-donation-page-button:hover {
+  transform: scale(1.1);
+  box-shadow: 4px 3px 6px rgba(0, 0, 0, 0,3);
+
+}
+
+
+
+
+
+
+
+
 
 @media screen and (min-width: 768px) {
+  .nav__container {
+    align-items: inherit;
+  }
   .nav__toggle {
     display: none;
   }
