@@ -96,6 +96,118 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 
+
+
+
+/* ===== Dropdown de idioma independiente ===== */
+.nav__lang-dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-left: auto; /* empuja hacia la derecha */
+  margin-right: 10px;
+}
+
+.nav__lang-btn {
+  background-color: transparent;
+  border: 2px solid var(--gris-chocolate);
+  color: var(--gris-chocolate);
+  font-size: 1.4rem;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nav__lang-btn:hover {
+  background-color: var(--gris-chocolate);
+  color: var(--base-white);
+}
+
+/* Menú oculto por defecto */
+.nav__lang-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: var(--gris-chocolate);
+  border: 1px solid var(--gris-chocolate);
+  border-radius: 6px;
+  list-style: none;
+  display: none;
+  min-width: 80px;
+  z-index: 1000;
+}
+
+/* Opciones del menú */
+.nav__lang-menu li a {
+  display: block;
+  padding: 5px 12px;
+  color: var(--base-white);
+  text-decoration: none;
+  font-size: 1.3rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav__lang-menu li:first-child a:first-child:hover {
+  background-color: var(--base-white);
+  color: var(--gris-chocolate);
+  border-radius: 5px 5px 0 0;
+}
+
+.nav__lang-menu li:last-child a:hover {
+  background-color: var(--base-white);
+  color: var(--gris-chocolate);
+  border-radius: 0 0 5px 5px;
+}
+
+/* Mostrar menú al hacer hover (desktop) */
+.nav__lang-dropdown:hover .nav__lang-menu {
+  display: block;
+}
+
+
+/* Flechita tipo "V" en el botón (pseudo-elemento) */
+.nav__lang-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;            /* espacio entre texto y la V */
+  position: relative;
+  padding-right: 12px; /* deja espacio para la V */
+}
+
+/* Usamos el carácter '∨' (parece una V) */
+.nav__lang-btn::after {
+  content: "∨";
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1;
+  margin-left: 4px;
+  transition: transform 0.25s ease;
+  display: inline-block;
+  transform-origin: center;
+  color: inherit;
+}
+
+/* Rota la V al "abrir" (hover para desktop) */
+.nav__lang-dropdown:hover .nav__lang-btn::after {
+  transform: rotate(180deg);
+}
+
+/* Si prefieres que la V siempre esté más pequeña en móviles */
+@media screen and (max-width: 767px) {
+  .nav__lang-btn::after {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+}
+
+
+
+
+
+
+
+
 /* Nav Toggle */
 /* ---------- */
 .nav__toggle {
