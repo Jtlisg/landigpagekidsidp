@@ -403,14 +403,14 @@ header {
 /* Seccion Conocenos */
 /* ------------- */
 
-.main__about-container {
+.main__about-container , .main__proyect-container{
     width: 100%;
     min-width:320px;
     padding-bottom: 70px;
     text-align: center;
 }
 
-.about__title-container {
+.about__title-container , .proyect__title-container{
     width: 90%;
     min-width: 288px;
     height: auto;
@@ -418,7 +418,7 @@ header {
 
 }
 
-.about__title-container h2 {    
+.about__title-container h2 , .proyect__title-container h2 {    
     padding-top: 50px;
     font-size: 2.4rem;
     font-weight: bold;
@@ -426,7 +426,7 @@ header {
     color: var(--black);
 }
 
-.about__title-container p { 
+.about__title-container p , .proyect__title-container p{ 
     padding-top: 30px;
     font-size: 1.4rem;
     font-weight: 500;
