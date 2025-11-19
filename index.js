@@ -100,3 +100,21 @@ dots[2].addEventListener("click", () => {
 
 // Iniciar
 startAuto();
+
+
+
+document.getElementById("btnCompartir").addEventListener("click", async () => {
+    if (navigator.share) {
+        try {
+            await navigator.share({
+                title: "IDP Kids",
+                text: "Apoya nuestro proyecto IDP Kids ❤️",
+                url: "https://jtlisg.github.io/landigpagekidsidp/"
+            });
+        } catch (error) {
+            console.log("Compartir cancelado");
+        }
+    } else {
+        alert("Tu dispositivo no soporta la opción de compartir.");
+    }
+});

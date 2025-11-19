@@ -27,6 +27,10 @@ ul, ol {
   list-style: none;
 }
 
+li {
+  list-style: none;
+}
+
 /* Hace que las imágenes nunca sobrepasen su contenedor */
 img {
   max-width: 100%;
@@ -475,48 +479,158 @@ header {
 
 
 
+/* Seccion Proyecto */
+/* ------------- */
+
+.main__proyect-container {
+    width: 100%;
+    min-width:320px;
+    padding-bottom: 100px;
+}
+
+.stage__two {
+  margin: 50px auto;
+}
+
+.proyect__info-stage-continer {
+    width: 80%;
+    min-width: 200px;
+    margin: 0 auto;
+    text-align: justify;
+    margin-bottom: 15px;
+}
 
 
+.proyect__info-stage-continer h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--gris-chocolate);
+}
+
+.proyect__info-stage-continer p {
+    margin-top: 15px;
+
+    font-size: 1.4rem;
+    color: #555;
+    line-height: 1.9rem;
+}
 
 
+/* Seccion Donar */
+/* ------------- */
+
+.main__donar-container {
+
+  height: 150px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 10px;
+  margin-bottom: 50px;
+}
+
+.main__donar-container h2 {
+    color: var(--gris-chocolate);
+    font-weight: bold;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+
+}
+
+.main__donar-container .dbox-donation-page-button{
+  margin-bottom: 30px;
+  
+}
+
+.main__donar-container p {
+    font-size: 1.4rem;
+    color: #555;
+    margin-bottom: 15px;
+
+}
 
 
-@media screen and (min-width: 768px) {
-  .nav__container {
-    align-items: inherit;
-  }
-  .nav__toggle {
-    display: none;
-  }
-
- .nav__list {
-    display: flex;
-    flex-direction: row;
-    position: static; /* en desktop no necesitamos absolute */
-    transform: none;  /* quita cualquier translate */
-    width: auto;
-    height: auto;
-    transition: none;
+.btn-share {
+    display: inline-block;
     align-items: center;
-    opacity: 1;
-  }
+    gap: 6px;
+    background: var(--gris-chocolate);
+    color: #fff;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: 0.25s ease;
+}
 
+.btn-share:hover {
+    background: #555;
+}
 
-  .nav__list li {
-    margin: 0 1rem;
-    font-size: 1.6rem;
-  }
-
-
-
-  .about__cards-container {
-    flex-direction: row;
-  }
+.btn-share .icon {
+    font-size: 18px;
 }
 
 
 
 
+.main__contactanos-container {
+    width: 100%;
+    min-width: 280px;
+    text-align: justify;
+    padding-bottom: 30px;
+
+}
+
+.contactanos__title-container {
+    width: 90%;
+    min-width: 288px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+    padding: 0 10px;
+}
+
+.contactanos__title-container h2 {
+    padding-top: 50px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color: var(--black);
+    text-align: center;
+    
+}
+
+.contactanos__title-container p {
+    padding-top: 20px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: #757575;
+    margin-bottom: 20px;
+}
+
+.contactanos__title-container a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.4rem;
+    color: var(--gris-chocolate);
+    margin-bottom: 15px;
+}
+
+
+footer {
+    background-color: var(--rosado-suave);
+    height: 30px;
+    color: var(--gris-chocolate);
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 1rem;
+}
 
 /* ===========================
    CARRUSEL — Idp (Aislado)
@@ -574,3 +688,37 @@ header {
     transform: scale(1.2);
 }
 
+
+
+@media screen and (min-width: 768px) {
+  .nav__container {
+    align-items: inherit;
+  }
+  .nav__toggle {
+    display: none;
+  }
+
+ .nav__list {
+    display: flex;
+    flex-direction: row;
+    position: static; /* en desktop no necesitamos absolute */
+    transform: none;  /* quita cualquier translate */
+    width: auto;
+    height: auto;
+    transition: none;
+    align-items: center;
+    opacity: 1;
+  }
+
+
+  .nav__list li {
+    margin: 0 1rem;
+    font-size: 1.6rem;
+  }
+
+
+
+  .about__cards-container {
+    flex-direction: row;
+  }
+}
