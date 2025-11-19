@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Idp Kids - Proyecto</title>
+    <title>Idp Kids - Project</title>
     <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
@@ -11,93 +11,146 @@
         <div class="nav__container">
             <div class="nav__logo">
                  <a class="logo" href="">Idp<span>Kids</span></a>
-             </div>
-
-               <!-- Dropdown de idioma -->
-              <div class="nav__lang-dropdown">
-                <button class="nav__lang-btn">Lenguage</button>
-                <ul class="nav__lang-menu">
-                    <li><a href="../index.html">🇪🇸 ES</a></li>
-                    <li><a href="index.html">🇺🇸 EN</a></li>
-                </ul>
-             </div>
-
-             <button class="nav__toggle" aria-label="Abrir menú principal">
+            </div>
+            <!-- Language dropdown -->
+            <div class="nav__lang-dropdown">
+              <button class="nav__lang-btn">Language</button>
+              <ul class="nav__lang-menu">
+                  <li><a href="../index.html">🇪🇸 ES</a></li>
+                  <li><a href="index.html">🇺🇸 EN</a></li>
+              </ul>
+            </div>
+              
+            <button class="nav__toggle" aria-label="Open main menu">
                 <span class="nav__toggle-bar"></span>
                 <span class="nav__toggle-bar"></span>
                 <span class="nav__toggle-bar"></span>
-             </button>
-
-            
-           
-
+            </button>
 
             <ul class="nav__list">
-                     <li><a href="">Home</a></li>
-                     <li><a href="#conocenos">About me</a></li>
-                     <li><a href="">Proyect</a></li>
-                     <li><a href="">Contact</a></li>
-                     <li><a href="https://donorbox.org/aulas-de-ninos-idpkids?"  class="nav__link--donar">Donar</a></li>
+                <li><a href="">Home</a></li>
+                <li><a href="#conocenos">About Us</a></li>
+                <li><a href="#proyecto">Project</a></li>
+                <li><a href="#contactanos">Contact</a></li>
+                <li><a href="https://donorbox.org/aulas-de-ninos-idpkids?" class="nav__link--donar">Donate</a></li>
             </ul>
-           
-
-
         </div>
     </nav>
+
     <header>
         <div class="header__title-container">
-            <h1 class="header__title">"Join us in building a future filled with faith and learning for children."</h1>
-            <p class="Header__subtitle">"Dedicated to creating a place where children can truly enjoy and grow!"</p>
+            <h1 class="header__title">“Help us build a future full of faith and learning for the children.”</h1>
+            <p class="Header__subtitle">Focused on creating a space where children can enjoy themselves!</p>
         </div>
         <div class="header__button-container">
-        <!-- Botón de donación -->
-        <a class="dbox-donation-page-button" href="https://donorbox.org/aulas-de-ninos-idpkids?" ><img src="https://donorbox.org/images/white_logo.svg">Donate</a>
+            <a class="dbox-donation-page-button" href="https://donorbox.org/aulas-de-ninos-idpkids?">
+                <img src="https://donorbox.org/images/white_logo.svg">Donate
+            </a>
         </div>
     </header>
-    <main>
 
-    <section  id="conocenos" class="main__plans-container">
-            <div class="plans__title-container">
-                <h2>Conocenos</h2>
-                <p>Somos una iglesia que se enfoca en poder bendecir los niños de nuestra comunidad
-                    , nuestro objetivo es poder crear un espacio donde ellos puedas recibir las enseñanzas 
-                    para que su vida sea transformada.
+    <main>
+        <section id="conocenos" class="main__about-container">
+            <div class="about__title-container">
+                <h2>About Us</h2>
+                <p>We are a church focused on blessing the children of our community.
+                   Our goal is to create a space where they can receive teachings 
+                   that will transform their lives.
                 </p>
             </div>
-            <section class="plans__slider-container">
-                
-
-                <article class="plans__card-container">
-                    <div class="plan__info-card-container">
-                     
-                    </div>
+            <section class="about__cards-container">
+                <article class="about__card-container">
+                    <img src="../assets/headerniñosidp.jpeg" alt="">
                 </article>
-
-                <article class="plans__card-container">
-                    
-                    <div class="plan__info-card-container">
-                        
-                    </div>
+                <article class="about__card-container">
+                    <img src="../assets/niñosidp1.jpeg" alt="">
                 </article>
-
-                <article class="plans__card-container">
-                   
-                    <div class="plan__info-card-container">
-                        
-                    </div>
+                <article class="about__card-container">
+                    <img src="../assets/niñosidp2.jpeg" alt="">
+                </article>
+                <article class="about__card-container">
+                    <img src="../assets/niñosidp5.jpeg" alt="">
                 </article>
             </section>
-    </section>
-
-        <section class="proyecto">
-            <h2>Proyecto</h2>
         </section>
-        <section class="donar"></section>
-        <section class="contactanos">
-            <h2>Contacto</h2>
+
+        <section id="proyecto" class="main__proyect-container">
+            <div class="proyect__title-container">
+                <h2>Project</h2>
+                <p>In this section we want to show the current construction status,
+                   as well as the stages we will continue according to the donations received.
+                </p>
+            </div>
+
+            <article class="proyect__stage stage__one">
+                <div class="proyect__info-stage-continer">
+                    <h3>Current Status -- Stage 1</h3>
+                    <p>We are currently in the first stage of construction,
+                       where we have raised the walls and basic foundations.
+                       There is still much to do, but with your help we can achieve it!
+                    </p>
+                </div>
+                <div class="proyect__image-stage-container">
+                    <div class="carrusel-idp">
+                        <div class="carrusel-idp__track">
+                            <img src="../assets/construccionipdstage1.jpeg" alt="">
+                            <img src="../assets/construccionidpstage2.jpeg" alt="">
+                            <img src="../assets/construccionidpstage3.jpeg" alt="">
+                            <img src="../assets/construccionidpstage4.jpeg" alt="">
+                            <img src="../assets/construccionipdstage5.jpeg" alt="">
+                            <img src="../assets/construccionidpstage6.jpeg" alt="">
+                        </div>
+
+                        <div class="carrusel-idp__dots">
+                            <span class="carrusel-idp__dot active"></span>
+                            <span class="carrusel-idp__dot"></span>
+                            <span class="carrusel-idp__dot"></span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="proyect__stage stage__two">
+                <div class="proyect__info-stage-continer">
+                    <h3>Project Goal -- Stage 2</h3>
+                    <p>Soon we will show the progress of the second stage,
+                       where we plan to finish the roof, windows, and doors.
+                    </p>
+                </div>                  
+            </article>
+        </section>
+
+        <section class="main__donar-container">
+            <h2>Make Your Donation Today!</h2>
+            <li><a href="https://donorbox.org/aulas-de-ninos-idpkids?" class="dbox-donation-page-button">Donate</a></li>
+            <p>You can help us share this site</p>
+            <button id="btnCompartir" class="btn-share">
+                <span class="icon">🔗</span> Share
+            </button>
+        </section>
+
+        <section id="contactanos" class="main__contactanos-container">
+            <div class="contactanos__title-container">
+                <h2>Contact</h2>
+                <p>We provide two communication channels if you want to reach out,
+                   have questions, or want to learn more about this project.
+                </p>
+
+                <a href="https://wa.me/504931725222" target="_blank">
+                    <span>📞</span> +504 31725222
+                </a>
+
+                <a href="mailto:jtlisama21@gmail.com">
+                    ✉️ jtlisama21@gmail.com
+                </a>
+            </div>
         </section>
     </main>
-    <footer></footer>
-    <script  src="../index.js"></script>
+
+    <footer>
+        <p>Church of God of the Prophecy | IdpKids 2025</p>
+    </footer>
+
+    <script src="../index.js"></script>
 </body>
 </html>

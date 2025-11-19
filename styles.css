@@ -625,11 +625,16 @@ header {
 
 footer {
     background-color: var(--rosado-suave);
-    height: 30px;
+    height: auto;
     color: var(--gris-chocolate);
     text-align: center;
-    padding: 20px 10px;
-    font-size: 1rem;
+    padding: 35px 10px;
+    font-size: 1.4rem;
+}
+
+footer p:hover {
+  color: var(--base-white);
+  transition: all 0.9s ease;
 }
 
 /* ===========================
