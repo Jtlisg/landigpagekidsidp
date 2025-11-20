@@ -102,19 +102,30 @@ dots[2].addEventListener("click", () => {
 startAuto();
 
 
-
 document.getElementById("btnCompartir").addEventListener("click", async () => {
+    let myIdioma = document.documentElement.lang;
+
     if (navigator.share) {
         try {
-            await navigator.share({
-                title: "IDP Kids",
-                text: "Apoya nuestro proyecto IDP Kids ❤️",
-                url: "https://jtlisg.github.io/landigpagekidsidp/"
-            });
+            if (myIdioma === "es") {
+                await navigator.share({
+                    title: "IDP Kids",
+                    text: "Apoya nuestro proyecto IDP Kids ❤️",
+                    url: "https://jtlisg.github.io/landigpagekidsidp/",
+                });
+            } else if (myIdioma === "en") {
+                await navigator.share({
+                    title: "IDP Kids",
+                    text: "Support our IDP Kids project ❤️",
+                    url: "https://jtlisg.github.io/landigpagekidsidp/",
+                });
+            }
         } catch (error) {
-            console.log("Compartir cancelado");
+            console.log("Compartir cancelado o falló");
         }
     } else {
-        alert("Tu dispositivo no soporta la opción de compartir.");
+        alert(myIdioma === "es" 
+            ? "Tu dispositivo no soporta la opción de compartir." 
+            : "Your device does not support the share option.");
     }
 });
