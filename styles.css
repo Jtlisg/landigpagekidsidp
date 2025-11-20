@@ -725,5 +725,40 @@ footer p:hover {
 
   .about__cards-container {
     flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+
+  .about__title-container h2, .proyect__title-container h2 , .main__donar-container h2, .contactanos__title-container h2 {
+    font-size: 3rem;
+  }
+
+   .about__title-container p , .proyect__title-container p , .contactanos__title-container p + a {
+    font-size: 1.7rem;
+  }
+
+  .proyect__info-stage-continer h3 + p{
+    font-size: 1.7rem;
+  }
+
+  .main__donar-container p {
+    font-size: 1.7rem;
+  }
+
+  footer p {
+    font-size: 1.8rem;
+  }
+
+}
+
+
+
+
+@media screen and (min-width: 768px) {
+  .about__card-container {
+    max-width: 250px;
+    height: 200px;
   }
 }
