@@ -379,7 +379,7 @@ header {
 }
 
 .dbox-donation-page-button {
-  background: rgb(18, 138, 237); 
+  background: #128aed; 
   color: rgb(255, 255, 255); 
   text-decoration: none; 
   display: flex;
@@ -761,4 +761,15 @@ footer p:hover {
     max-width: 250px;
     height: 200px;
   }
+}
+
+
+.btn-paypal {
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.pp-HTNCSRHJ3XSMG:hover {
+    background-color: #0365b6;
+    transform: scale(1.1);
 }
